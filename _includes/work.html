@@ -1,0 +1,26 @@
+<div class="work-container">
+	<div class="wrapper work-tabs">
+		<ul class="nav nav-pills">
+		    <li class="active"><a data-toggle="pill" href="#web">Web</a></li>
+		   <!--  <li><a data-toggle="pill" href="#design">Graphic Design</a></li>
+		    <li><a data-toggle="pill" href="#illustration">Illustration</a></li> -->
+		  </ul>
+
+		<div class="tab-content">
+			
+			<div id="web" class="tab-pane fade in active">
+			    {% include web-work.html %}
+			</div>
+			
+		    <div id="design" class="tab-pane fade">
+		     	{% include design-work.html %}
+		    </div>
+			
+		    <div id="illustration" class="tab-pane fade">
+		    	{% include illustration-work.html %}
+		    </div>
+			
+		</div>		
+	</div>
+
+</div>

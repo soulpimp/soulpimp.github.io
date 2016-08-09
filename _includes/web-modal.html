@@ -1,0 +1,51 @@
+{% for web in site.work | where: "type","web" %}
+  <div class="modal fade in" id="web-{{web.name}}" tabindex="-1" role="dialog" aria-labelledby="webLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close"></button>
+          <h4 class="modal-title" id="webLabel">{{ web.modalHeader }}</h4>
+        </div>
+        <div class="modal-body">
+          
+          <div id="work-slider-{{web.name}}" class="carousel slide work" data-ride="carousel" >
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              {% assign counter = 0 %}
+              {% for item in web.images %}
+                {% assign counter=counter | plus:1 %}
+                <li data-target="#work-slider" data-slide-to="{{ counter }}"></li>
+              {% endfor %}
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">  
+              
+              {% for image in web.images %}     
+                <div class="item">
+                    <img src="{{site.baseurl}}{{image.image_path}}" class="" alt="{{image.title}}">
+                </div>
+              {% endfor %}    
+              
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#work-slider-{{web.name}}" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#work-slider-{{web.name}}" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div class="modal-content-inner">{{ web.content }}</div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}

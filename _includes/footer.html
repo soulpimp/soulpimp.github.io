@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="col-md-6 footer-left">
+      <img class="hex" src="../img/hex.svg" alt="">
+      <hgroup>
+        <h3>
+          {{ site.title }}
+        </h3>
+        <p class="sub-heading">{{ site.description }}</p> 
+        <p class="copyright"> &copy;{{ 'now' | date: "%Y" }} Forsyth Design</p>
+      </hgroup>
+    </div>
+    <div class="col-md-6 footer-right">
+      <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+    </div>
+  </div>
+</footer>

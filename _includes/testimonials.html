@@ -1,0 +1,19 @@
+<div id="props" class="carousel slide carousel-fade" data-ride="carousel">
+	<div class="carousel-inner" role="listbox">
+		{% for prop in site.props %}	
+			<div class="item">
+				<section class="accolades">
+					{{ prop.content }}
+				</section>
+				<div class="slide-footer">
+					<img src="{{ site.basurl }}img/testimonials/{{ prop.image }}" alt="{{ prop.name }} Linkedin Profile Image">
+					<div class="info"> 
+						<p>{{ prop.name }}</p>
+						<span>{{ prop.title }}</span>
+						<span>{{ prop.company }}</span>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>

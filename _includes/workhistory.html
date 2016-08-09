@@ -1,0 +1,17 @@
+<ul class="timeline">
+	{% for job in site.jobs %}
+	<li class="timeline-container">
+		<p class="timeline-date">{{ job.years }}</p>
+		<div class="timeline-content">
+			<div class="timeline-inner-wrap">
+				<h3>{{ job.title }}</h3>
+				<h5>{{ job.role }}</h5>
+				<a href="#" class="more" aria-label="more"></a>
+				<div class="content-wrap" style="display:none;">
+					{{ job.content }}	
+				</div>
+			</div>
+		</div>
+	</li>
+	{% endfor %}
+</ul>

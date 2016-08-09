@@ -1,0 +1,11 @@
+<ul class="web-thumbnails">
+	{% for web in site.work | where: "type","web" %}
+		<li class="web-thumbnail">
+			<a href="#" data-toggle="modal" data-target="#web-{{web.name}}">
+				<img src="{{site.baseurl}}/img/work/{{web.title}}/{{web.thumb}}" class="thumbnail" alt="{{web.modalHeader}}">
+			</a>
+		</li>
+	{% endfor %}
+
+</ul>
+{% include web-modal.html %}
