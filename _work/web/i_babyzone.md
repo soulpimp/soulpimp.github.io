@@ -1,6 +1,6 @@
 ---
 type: web
-title: Babyzone
+title: babyzone
 modalHeader: Babyzone.com
 thumb: thumb.jpg
 name: babyzone
