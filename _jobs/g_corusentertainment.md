@@ -1,7 +1,7 @@
 ---
 title:  "Corus Entertainment"
 role: "Front-end Developer"
-years: "2010"
+years: "2009"
 weight: 5
 ---
 
